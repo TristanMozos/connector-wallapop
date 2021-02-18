@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_milanuncios_backend_tree" model="ir.ui.view">
+        <field name="name">Milanuncios backend</field>
+        <field name="model">milanuncios.backend</field>
+        <field name="arch" type="xml">
+            <tree string="Milanuncios Backend">
+                <field name="name"/>
+                <field name="user"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_milanuncios_backend_form" model="ir.ui.view">
+        <field name="name">milanuncios.backend.form</field>
+        <field name="model">milanuncios.backend</field>
+        <field name="arch" type="xml">
+            <form>
+                <group><field name="name"/></group>
+                <group><field name="user"/></group>
+                <group><field name="passwwd" password="True"/></group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_milanuncios_backend" model="ir.actions.act_window">
+        <field name="name">Milanuncios Backends</field>
+        <field name="res_model">milanuncios.backend</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_milanuncios_backend_tree"/>
+    </record>
+
+</odoo>

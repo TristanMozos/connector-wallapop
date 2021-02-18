@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- eBay Menu -->
+    <menuitem id="menu_milanuncios_root"
+        parent="connector.menu_connector_root"
+        name="Milanuncios"
+        sequence="10"
+        groups="connector.group_connector_manager"/>
+
+    <!-- Backends submenu -->
+    <menuitem id="menu_milanuncios_backend"
+        name="Backends"
+        parent="menu_milanuncios_root"
+        action="action_milanuncios_backend"/>
+
+</odoo>
